@@ -8,14 +8,23 @@ $(document).ready(function() {
 		$("#Username").prop("readonly",false);
 		$("#Password").prop("readonly",false);
 		
-		
+
+		$("#Id").prop("disabled",true);
 		$("#Valid").show();
 	};
 	
 	this.valider=function(){
 		$("#MAJ").show();
+		$("#Id").prop("disabled",false);
 		
-		$("#Valid").show();
+
+		$("#Nom").prop("readonly",true);
+		$("#Prenom").prop("readonly",true);
+		$("#Email").prop("readonly",true);
+		$("#Tel").prop("readonly",true);	
+		$("#Username").prop("readonly",true);
+		$("#Password").prop("readonly",true);		
+		$("#Valid").hide();
 	};
 	
 	this.reload=function(){
