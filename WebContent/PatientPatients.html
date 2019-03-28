@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient principal et patients secondaires</title>
+<link rel="stylesheet" type="text/css"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Les patients que je gère</h2>
+		<p>Vous trouverez ici la liste des patients que vous gérez</p>
+		<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+			<!-- Links -->
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="PatientRdvHistorique.html">Historique</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="PatientRdvVenir.html">Mes rendez-vous futurs</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="PatientCoordonnees.html">Mes coordonnées</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="PatientPatients.html">Les patients que je gère</a></li>
+			</ul>
+		</nav>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item"><a href="#">Client</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Les
+					patients que je gère</li>
+			</ol>
+		</nav>
+
+		<h3>Mes patients</h3>
+		<div class="form-group">
+			<label for="civilite">Quel patient ?</label> <select
+				class="form-control" id="patients">
+
+			</select>
+		</div>
+
+		<div align="center">
+			<button class="btn btn-primary" onclick="add();">
+				<i class="fas fa-plus-square fa-2x"></i>
+			</button>
+		</div>
+
+
+		<!-- 		style="display: none;" -->
+		<div id="patientEdit" class="card mt-5">
+			<form>
+				<div class="card-header">
+					<h5>Edition du patient</h5>
+				</div>
+				<div class="card-body">
+
+					<div class="form-group">
+						<label for="id">Identifiant:</label> <input type="number"
+							class="form-control" id="id" readonly required>
+					</div>
+					<div class="form-group">
+						<label for="nom">Nom:</label> <input type="text"
+							class="form-control" id="nom">
+					</div>
+					<div class="form-group">
+						<label for="prenom">Prénom:</label> <input type="text"
+							class="form-control" id="prenom">
+					</div>
+					<div class="form-group">
+						<label for="age">Age:</label> <input type="number"
+							class="form-control" id="age">
+					</div>
+					<div class="form-group">
+						<label for="mail">Mail:</label> <input type="email"
+							class="form-control" id="mail">
+					</div>
+					<div class="form-group">
+						<label for="carteVitale">Numéro de Carte Vitale:</label> <input
+							type="text" class="form-control" id="carte-vitale">
+					</div>
+					<div class="form-group">
+						<label for="tel">Tel:</label> <input type="text"
+							class="form-control" id="tel">
+					</div>
+					<div class="form-group">
+						<label for="rue">Rue:</label> <input type="text"
+							class="form-control" id="rue">
+					</div>
+					<div class="form-group">
+						<label for="codePostal">Code postal:</label> <input type="text"
+							class="form-control" id="codePostal">
+					</div>
+					<div class="form-group">
+						<label for="ville">Ville:</label> <input type="text"
+							class="form-control" id="ville">
+					</div>
+				</div>
+
+				<div class="card-footer text-right">
+					<div class="btn-group">
+						<button class="btn btn-success" onclick="validate();">
+							<i class="fas fa-check fa-2x"></i>
+						</button>
+
+						<button class="btn btn-danger" onclick="openwindow();">
+							<i class="fas fa-trash fa-2x"></i>
+						</button>
+					</div>
+
+				</div>
+			</form>
+		</div>
+		<br>
+		<div align="center" style="display: none;">
+			<h3>Etes-vous sûr de vouloir supprimer ce patient ?</h3>
+			<div class="btn-group">
+				<button class="btn btn-danger" onclick="delete();">
+					<i class="fas fa-trash fa-2x"></i>
+				</button>
+
+				<button class="btn btn-warning" onclick="cancel();">
+					<i class="fas fa-undo"></i>
+				</button>
+			</div>
+
+		</div>
+	</div>
+
+</body>
