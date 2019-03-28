@@ -24,3 +24,11 @@ text-font {
 	font-weight: bold;
 	font-size: 14px
 }
+
+.result {
+	width: 500px;
+}
+
+.search {
+	height:300px;
+}
