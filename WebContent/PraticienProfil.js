@@ -29,8 +29,28 @@ $(document).ready(function() {
 	
 	this.reload=function(){
 		for(let praticien of praticiens) {
-			$("#Id").append("<option value='"+praticien.id+"' onclick=reload()>"+praticien.prenom+" "+praticien.nom+"</option>");
+			$("#Id").append("<option value='"+praticien.id+"'>"+praticien.prenom+" "+praticien.nom+"</option>");
 		}
+		
 	};
 	this.reload();
+	this.praticienload=function(){
+		let praticienId=parseInt($("#Id").val());	
+		for(var praticien of praticiens) {
+			if(praticienId===praticien.id){
+				break;
+			}
+		}
+		console.log(praticienId);
+		console.log(praticien.id);
+		$("#Nom").val(praticien.nom);
+		$("#Prenom").val(praticien.prenom);
+		$("#Email").val(praticien.email);
+		$("#Tel").val(praticien.tel);
+		$("#Username").val(praticien.username)
+		$("#Password").val(praticien.nom);
+	}
+	
 });
+
+
