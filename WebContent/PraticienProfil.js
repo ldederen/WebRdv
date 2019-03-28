@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	this.maj = function() {
-		console.log($("#Id").val());
-		if(!$("#Id").val()){
+		if($("#Id").val()!==null){
 		$("#MAJ").hide();
 		$("#Nom").prop("readonly",false);
 		$("#Prenom").prop("readonly",false);
