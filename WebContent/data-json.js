@@ -93,3 +93,4 @@ var praticiens = [ {
 		"tel" : "06-12-36-87-98",
 		"dureeCreneau" : 15
 	} ];
+

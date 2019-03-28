@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+//	debloque les champs pour la mise à jour 
 	this.maj = function() {
 		if($("#Id").val()!==null){
 		$("#MAJ").hide();
@@ -14,6 +16,7 @@ $(document).ready(function() {
 		$("#Valid").show();}
 	};
 	
+//	mets à jour les données et rebloque les champs
 	this.valider=function(){
 		$("#MAJ").show();
 		$("#Id").prop("disabled",false);
@@ -45,6 +48,7 @@ $(document).ready(function() {
 		this.reload();
 	};
 	
+	//charge les praticiens pour simuler une session utilisateur et mets les champs à vide
 	this.reload=function(){
 		$('#Id').empty();
 		for(let praticien of praticiens) {
@@ -58,7 +62,10 @@ $(document).ready(function() {
 		$("#Username").val('');
 		$("#Password").val('');
 	};
+	
 	this.reload();
+	
+//	Charge les données du praticiens selectionné (selon la session utilisateur en cours)
 	this.praticienload=function(){
 		let praticienId=parseInt($("#Id").val());	
 		for(var praticien of praticiens) {
