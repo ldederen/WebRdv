@@ -10,6 +10,10 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<script src="data-json.js"></script>
+<script src="PatientPatients.js"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -109,7 +113,7 @@
 							<i class="fas fa-check fa-2x"></i>
 						</button>
 
-						<button class="btn btn-danger" onclick="openwindow();">
+						<button type="button" class="btn btn-danger" onclick="openWindow();">
 							<i class="fas fa-trash fa-2x"></i>
 						</button>
 					</div>
@@ -118,14 +122,14 @@
 			</form>
 		</div>
 		<br>
-		<div align="center" style="display: none;">
+		<div id="patientDelete" align="center" style="display: none;" >
 			<h3>Etes-vous sûr de vouloir supprimer ce patient ?</h3>
 			<div class="btn-group">
 				<button class="btn btn-danger" onclick="delete();">
 					<i class="fas fa-trash fa-2x"></i>
 				</button>
 
-				<button class="btn btn-warning" onclick="cancel();">
+				<button class="btn btn-warning" onclick="closeWindow();">
 					<i class="fas fa-undo"></i>
 				</button>
 			</div>
