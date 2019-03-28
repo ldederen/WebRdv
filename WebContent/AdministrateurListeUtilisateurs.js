@@ -43,31 +43,10 @@ $(document).ready(function() {
 		$("#Cancel").hide();
 	}
 	
-//	this.reload=function(){
-//		for(let praticien of praticiens) {
-//			$("#Id").append("<option value='"+praticien.id+"'>"+praticien.prenom+" "+praticien.nom+"</option>");
-//		}
-//		
-//	};
-	
-//	this.reload();
-	
-//	this.praticienload=function(){
-//		let praticienId=parseInt($("#Id").val());	
-//		for(var praticien of praticiens) {
-//			if(praticienId===praticien.id){
-//				break;
-//			}
-//		}
-//		console.log(praticienId);
-//		console.log(praticien.id);
-//		$("#Nom").val(praticien.nom);
-//		$("#Prenom").val(praticien.prenom);
-//		$("#Email").val(praticien.email);
-//		$("#Tel").val(praticien.tel);
-//		$("#Username").val(praticien.username)
-//		$("#Password").val(praticien.nom);
-//	}
+
+	for (let eleve of this.eleves) {
+		$("#users-tab").append("<tr><td>"+user.username+"</td><td>"+user.type+"</td><td><td><div class='btn-group'><button class='btn btn-primary' onclick='edit("+user.id+");'><i class='fas fa-edit'></i></button><button class='btn btn-danger' onclick='remove("+user.id+");'><i class='far fa-trash-alt'></i></button></div></td></tr>");
+	}
 	
 });
 
