@@ -2,10 +2,10 @@ $(document).ready(function() {
 	
 	var self = this;
 	
-	this.mode = "";
+	this.mode = ""; // mode de fonction par défault vide
 
 	this.add = function() {
-		this.mode = "add";
+		this.mode = "add"; // ici on dit que le mode de fonction devient add
 		this.cancel();
 		$("#patientRdvAVenirEdit").show();
 	};

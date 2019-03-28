@@ -93,3 +93,29 @@ var praticiens = [ {
 		"tel" : "06-12-36-87-98",
 		"dureeCreneau" : 15
 	} ];
+
+var patientsRdvHistorique = [ {
+	"id" : 1,
+	"Date" : "01/04/17",
+	"lieu" : "Bordeaux",
+	"motif" : "Mega grosse gastro",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 2,
+	"Date" : "20/04/17",
+	"lieu" : "Pessac",
+	"motif" : "Maux de ventre",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 3,
+	"Date" : "11/06/17",
+	"lieu" : "Talence",
+	"motif" : "Rage de la dent gauche",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 4,
+	"Date" : "05/09/17",
+	"lieu" : "Libourne",
+	"motif" : "Massage Shiatsu du dos",
+	"nomDuPraticien" : "XXXXX",
+}];
