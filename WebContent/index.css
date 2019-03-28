@@ -14,3 +14,13 @@ navbar-title {
 .container {
 	display: flex;
 }
+
+title-font {
+	font-weight: bold;
+	font-size: 20px
+}
+
+text-font {
+	font-weight: bold;
+	font-size: 14px
+}
