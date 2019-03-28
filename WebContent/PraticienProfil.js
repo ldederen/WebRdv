@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$("#Nom").prop("readonly",false);
 		$("#Prenom").prop("readonly",false);
 		$("#Email").prop("readonly",false);
-		$("#Tel").prop("readonly",false);
+		$("#Tel").prop("readonly",false);	
 		$("#Username").prop("readonly",false);
 		$("#Password").prop("readonly",false);
 		
@@ -20,7 +20,7 @@ $(document).ready(function() {
 	
 	this.reload=function(){
 		for(let praticien of praticiens) {
-			$("#formateur").append("<option value='"+formateur.id+"'>"+formateur.prenom+" "+formateur.nom+"</option>");
+			$("#Id").append("<option value='"+praticien.id+"'>"+praticien.prenom+" "+praticien.nom+"</option>");
 		}
 	};
 	this.reload();
