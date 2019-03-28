@@ -3,13 +3,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Patient</title>
-<link rel="stylesheet" type="text/css"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="patientRdvAVenir.js"></script>
+<script src="data-json.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -31,7 +30,7 @@
 			</ol>
 		</nav>
 
-		<table class="table table-bordered">
+		<table id = "patientRdvAVenirTab" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>Date</th>
@@ -41,70 +40,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<div>
-							<button type="button" class="btn btn-primary">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button type="button" class="btn btn-primary">
-								<i class="far fa-trash-alt"></i>
-							</button>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<div>
-							<button type="button" class="btn btn-primary">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button type="button" class="btn btn-primary">
-								<i class="far fa-trash-alt"></i>
-							</button>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<div>
-							<button type="button" class="btn btn-primary">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button type="button" class="btn btn-primary">
-								<i class="far fa-trash-alt"></i>
-							</button>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<div>
-							<button type="button" class="btn btn-primary">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button type="button" class="btn btn-primary">
-								<i class="far fa-trash-alt"></i>
-							</button>
-						</div>
-					</td>
-				</tr>
+			<!-- Géré dynamiquement par le fichier patientRdvAVenir.js -->
 			</tbody>
 		</table>
 	</div>
