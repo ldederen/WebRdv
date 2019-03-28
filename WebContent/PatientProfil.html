@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Praticien</title>
+<title>Patient</title>
 <link rel="stylesheet" type="text/css"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 <link rel="stylesheet"
@@ -10,40 +10,20 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script src="PraticienProfil.js"></script>
+<script src="PatientProfil.js"></script>
 <script src="data-json.js"></script>
 </head>
 <body>
 	<!-- container de page pour bootstrap -->
 	<div class="container">
 		<br />
-		<!-- 		barre de navigation globale -->
-		<div>
-			<nav
-				class="navbar navbar-title navbar-light bg-light navbar-expand-md fixed-top">
-				<!-- Brand/logo -->
-				<a class="navbar-brand" href="Index.html"> <img
-					src="Images/icon-mon-rdv.png" width="30" height="30"
-					class="d-inline-block align-top" alt=""> Mon-rdv
-				</a>
-
-				<!-- Links -->
-				<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a class="nav-link" href="AdministrateurProfil.html"><b>Espace Administrateur</b></a></li>
-				<li class="nav-item"><a class="nav-link" href="PraticienProfil.html"><b>Espace Praticien</b></a></li>
-				<li class="nav-item"><a class="nav-link" href="PatientRdvVenir.html"><b>Espace Patient</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="Login.html"><b>Connexion</b></a></li>
-				</ul>
-			</nav>
-		</div>
 		<!-- 		container de barre de navigation -->
-		<div class="mt-5">
+		<div>
+			<!-- Mettre dans une div permet de mieux gérer la position de l'élément -->
 			<ul class="nav nav-tabs">
 				<li class="nav-item"><a class="nav-link active">Mon profil</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="PraticienCalendrier.html">Mon calendrier</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="PraticienPatients.html">Mes Patients</a></li>
+					href="PatientRdvVenir.html">Mes rendez-vous</a></li>
 			</ul>
 		</div>
 		<!-- 		container de formulaire -->

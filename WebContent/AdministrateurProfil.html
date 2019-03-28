@@ -10,11 +10,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script src="AdministrateurListeUtilisateurs.js"></script>
+<script src="AdministrateurProfil.js"></script>
 </head>
 <body>
 	<div class="container">
-
+		<br />
 		<div>
 			<ul class="nav nav-tabs">
 				<li class="nav-item"><a class="nav-link active">Mon profil</a></li>
@@ -38,24 +38,39 @@
 				<li class="breadcrumb-item"><a href="#">Home</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Mon
 					espace administrateur</li>
-				<li class="breadcrumb-item active" aria-current="page">Liste
-					des utilisateurs</li>
+				<li class="breadcrumb-item active" aria-current="page">Mes
+					informations</li>
 			</ol>
 		</nav>
 
+		<div>
+			<form>
+				<br />
 
-
-		<table id="users-tab" class="table table-striped">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col">Username</th>
-					<th scope="col">Type</th>
-				</tr>
-			</thead>
-			<tbody>
-		</table>
-
+				<div class="form-group">
+					<label for="Username">Identifiant</label> <input type="text"
+						class="form-control" id="Username" placeholder="Identifiant"
+						readonly>
+				</div>
+				<div class="form-group">
+					<label for="password">Mot de passe</label> <input type="password"
+						class="form-control" id="Password" placeholder="Mot de passe"
+						readonly>
+				</div>
+				<div class="form-group">
+					<label for="password-confirmation">Confirmation du mot de
+						passe</label> <input type="password" class="form-control"
+						id="Password-confirmation"
+						placeholder="Confirmation du mot de passe" readonly>
+				</div>
+				<button id="MAJ" type="button" class="btn btn-primary"
+					onclick="maj();">Mettre à jour</button>
+				<button id="Valid" type="button" class="btn btn-success"
+					onclick="valider();" style="display: none">Valider</button>
+				<button id="Cancel" type="button" class="btn btn-danger"
+					onclick="annuler();" style="display: none">Annuler</button>
+			</form>
+		</div>
 	</div>
 </body>
-
 </html>

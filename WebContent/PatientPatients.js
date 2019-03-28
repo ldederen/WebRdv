@@ -7,12 +7,19 @@ $(document).ready(function() {
 	this.add = function() {
 		this.mode = "add";
 		this.cancel();
-		$("#patientEdit").show();
+	};
+	
+	this.openWindow = function() {
+		$("#patientDelete").show();
+	};
+	
+	this.closeWindow = function() {
+		$("#patientDelete").hide();
 	};
 
 	this.edit = function(id) {
 		this.mode = "edit";
-		for(var patient of p) {
+		for(var patient of patients) {
 			if(patient.id === id) {
 				break;
 			}
@@ -20,14 +27,15 @@ $(document).ready(function() {
 		
 		$("#id").prop("readonly",true);
 		$("#id").val(patient.id);
-		$("#civilite").val(patient.civilite);
 		$("#nom").val(patient.nom);
 		$("#prenom").val(patient.prenom);
 		$("#age").val(patient.age);
 		$("#mail").val(patient.mail);
 		$("#tel").val(patient.tel);
 		$("#numeroCarteVitale").val(patient.numeroCarteVitale);
-		$("#principal").val(patient.principal);
+		$("#rue").val(patient.adresse.rue);
+		$("#codePostal").val(patient.adresse.codePostal);
+		$("#ville").val(patient.adresse.ville);
 		
 		$("#patientEdit").show();
 	};
@@ -37,15 +45,15 @@ $(document).ready(function() {
 		
 		let patient = {};
 		patient.id = parseInt($("#id").val());
-		patient.civilite = $("#civilite").val();
 		patient.nom = $("#nom").val();
 		patient.prenom = $("#prenom").val();
-		patient.age = parseInt($("#age")).val();
+		patient.age = parseInt$("#age").val();
 		patient.mail = $("#mail").val();
-		patient.tel = parseInt($("#tel").val());
-		patient.numeroCarteVitale = parseInt($("#numeroCarteVitale").val());
-		patient.principal = $("#principal").val();
-		
+		patient.tel = $("#tel").val();
+		patient.numeroCarteVitale = $("#numeroCarteVitale").val();
+		patient.rue = $("#rue").val();
+		patient.codePostal = $("#codePostal").val();
+		patient.ville = $("#ville").val();
 		
 		for(var index in patients) {
 			if(patients[index].id === patient.id) {
@@ -71,14 +79,15 @@ $(document).ready(function() {
 		
 		$("#id").prop("readonly",false);
 		$("#id").val("");
-		$("#civilite").val("");
 		$("#nom").val("");
 		$("#prenom").val("");
 		$("#age").val("");
 		$("#mail").val("");
 		$("#tel").val("");
-		$("#numeroCarteVitale").val("");
-		$("#principal").val("");
+		$("#carteVitale").val("");
+		$("#rue").val("");
+		$("#codePostal").val("");
+		$("#ville").val("");
 	};
 
 	this.remove = function(id) {
@@ -101,40 +110,41 @@ $(document).ready(function() {
 	this.reload = function() {
 		$("#patientTab tbody").empty();
 		
+		
+		
 		for(let patient of patients) {
 			for(var civilite of civilites) {
 				if(civilite.code === patient.civilite) {
 					break;
 				}
 			}
-			
-			var praticien = {"nom":"","prenom":""};
-			if(patient.praticien) {
-				for(praticien of praticiens) {
-					if(praticien.id === patient.praticien.id) {
-						break;
-					}
-				}
-			}
 		}
 	};
+// var formateur = {"nom":"","prenom":""};
+// if(patient.formateur) {
+// for(formateur of formateurs) {
+// if(formateur.id === patient.formateur.id) {
+// break;
+// }
+// }
+// }
+// let dtNaissance = new Date(patient.dtNaissance);
+// $("#patientTab").append("<tr><th>"+patient.id+"</th><td>"+patient.nom+"</td><td>"+patient.prenom+"</td><td>"+patient.age+"</td><td>"+patient.rue+"</td><td>"+patient.codePostal+"</td><td>"+patient.ville+"</td><td><div
+// class='btn-group'><button class='btn btn-primary'
+// onclick='edit("+patient.id+");'><i class='fas fa-edit'></i></button><button
+// class='btn btn-danger' onclick='remove("+patient.id+");'><i class='far
+// fa-trash-alt'></i></button></div></td></tr>");
+// }
+	
 	
 	this.reload();
 	
-	this.loadCivilite = function() {
-		for(let civilite of civilites) {
-			$("#civilite").append("<option value='"+civilite.code+"'>"+civilite.label+"</option>");
-		}
-	};
+// this.loadFormateur = function() {
+// for(let formateur of formateurs) {
+// $("#formateur").append("<option value='"+formateur.id+"'>"+formateur.nom+" "+
+// formateur.prenom +"</option>");
+// }
+// };
 	
-	this.loadCivilite();
-	
-	this.loadPraticien = function() {
-		for(let praticien of praticiens) {
-			$("#praticien").append("<option value='"+praticien.id+"'>"+praticien.nom+" "+ praticien.prenom +" "+ praticien.specialite +"</option>");
-		}
-	};
-	
-	this.loadPraticien();
-
+	this.loadFormateur();
 });
