@@ -12,7 +12,7 @@ var patients = [ {
 		"id" : 1
 	}
 }, {
-	"id" : 1,
+	"id" : 2,
 	"civilite" : "M.",
 	"nom" : "DUBOURG",
 	"prenom" : "JASON",
@@ -25,7 +25,7 @@ var patients = [ {
 		"id" : 2
 	}
 }, {
-	"id" : 1,
+	"id" : 3,
 	"civilite" : "M.",
 	"nom" : "SARPOULET",
 	"prenom" : "Jory",
@@ -38,7 +38,7 @@ var patients = [ {
 		"id" : 1
 	}
 }, {
-	"id" : 1,
+	"id" : 4,
 	"civilite" : "M.",
 	"nom" : "DEDEREM",
 	"prenom" : "Loïc",
@@ -84,13 +84,31 @@ var praticiens = [ {
 		"prenom" : "Eric",
 		"mail":"esultan@ajc.com",
 		"tel" : "06-12-36-54-98",
-		"dureeCreneau" : 60 
+		"dureeCreneau" : 60,
+		"Utilisateur" :{
+			"id":1
+			}
 	}, {
 		"id" : 2,
 		"nom" : "ABID",
 		"prenom" : "Jordan",
 		"mail":"jabid@ajc.com",
 		"tel" : "06-12-36-87-98",
-		"dureeCreneau" : 15
+		"dureeCreneau" : 15,
+		"Utilisateur" :{
+			"id":2
+		}
 	} ];
+
+var utilisateurs =[{
+	"id":1,
+	"username":"esultan",
+	"mdp":"AJC",
+	"type":"PRATICIEN"
+},{
+	"id":2,
+	"username":"jabid",
+	"mdp":"AJC2",
+	"type":"PRATICIEN"
+}];
 

@@ -32,7 +32,7 @@ $(document).ready(function() {
 		praticien.email=$("#Email").val();
 		praticien.tel=$("#Tel").val();
 		praticien.username=$("#Username").val();
-		praticien.nom=$("#Password").val();
+		praticien.password=$("#Password").val();
 		
 		
 		
@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$("#Email").val(praticien.email);
 		$("#Tel").val(praticien.tel);
 		$("#Username").val(praticien.username);
-		$("#Password").val(praticien.nom);
+		$("#Password").val(praticien.password);
 	}
 	
 });
