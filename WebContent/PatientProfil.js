@@ -6,8 +6,10 @@ $(document).ready(function() {
 		$("#MAJ").hide();
 		$("#Nom").prop("readonly",false);
 		$("#Prenom").prop("readonly",false);
+		$("#Age").prop("readonly",false);
 		$("#Email").prop("readonly",false);
 		$("#Tel").prop("readonly",false);	
+		$("#NumeroCarteVitale").prop("readonly",false);	
 		$("#Username").prop("readonly",false);
 		$("#Password").prop("readonly",false);
 		
@@ -21,26 +23,30 @@ $(document).ready(function() {
 		$("#MAJ").show();
 		$("#Id").prop("disabled",false);
 		
-		let praticienId=parseInt($("#Id").val());	
-		for(var praticien of praticiens) {
-			if(praticienId===praticien.id){
+		let patientId=parseInt($("#Id").val());	
+		for(var patient of patients) {
+			if(patientId===patient.id){
 				break;
 			}
 		}
-		praticien.nom=$("#Nom").val();
-		praticien.prenom=$("#Prenom").val();
-		praticien.email=$("#Email").val();
-		praticien.tel=$("#Tel").val();
-		praticien.username=$("#Username").val();
-		praticien.password=$("#Password").val();
+		patient.nom=$("#Nom").val();
+		patient.prenom=$("#Prenom").val();
+		patient.age=$("#Age").val();
+		patient.email=$("#Email").val();
+		patient.tel=$("#Tel").val();
+		patient.numeroCarteVitale=$("#NumeroCarteVitale").val();
+		patient.username=$("#Username").val();
+		patient.password=$("#Password").val();
 		
 		
 		
 
 		$("#Nom").prop("readonly",true);
 		$("#Prenom").prop("readonly",true);
+		$("#Age").prop("readonly",true);	
 		$("#Email").prop("readonly",true);
-		$("#Tel").prop("readonly",true);	
+		$("#Tel").prop("readonly",true);
+		$("#NumeroCarteVitale").prop("readonly",true);	
 		$("#Username").prop("readonly",true);
 		$("#Password").prop("readonly",true);		
 		$("#Valid").hide();
@@ -51,14 +57,16 @@ $(document).ready(function() {
 	//charge les praticiens pour simuler une session utilisateur et mets les champs à vide
 	this.reload=function(){
 		$('#Id').empty();
-		for(let praticien of praticiens) {
-			$("#Id").append("<option value='"+praticien.id+"'>"+praticien.prenom+" "+praticien.nom+"</option>");
+		for(let patient of patients) {
+			$("#Id").append("<option value='"+patient.id+"'>"+patient.prenom+" "+patient.nom+"</option>");
 		}
 		$("#Id").val('');
 		$("#Nom").val('');
 		$("#Prenom").val('');
+		$("#Age").val('');
 		$("#Email").val('');
 		$("#Tel").val('');
+		$("#NumeroCarteVitale").val('');
 		$("#Username").val('');
 		$("#Password").val('');
 	};
@@ -66,19 +74,21 @@ $(document).ready(function() {
 	this.reload();
 	
 //	Charge les données du praticiens selectionné (selon la session utilisateur en cours)
-	this.praticienload=function(){
-		let praticienId=parseInt($("#Id").val());	
-		for(var praticien of praticiens) {
-			if(praticienId===praticien.id){
+	this.patientload=function(){
+		let patientId=parseInt($("#Id").val());	
+		for(var patient of patients) {
+			if(patientId===patient.id){
 				break;
 			}
 		}
-		$("#Nom").val(praticien.nom);
-		$("#Prenom").val(praticien.prenom);
-		$("#Email").val(praticien.email);
-		$("#Tel").val(praticien.tel);
-		$("#Username").val(praticien.username);
-		$("#Password").val(praticien.password);
+		$("#Nom").val(patient.nom);
+		$("#Prenom").val(patient.prenom);
+		$("#Age").val(patient.age);
+		$("#Email").val(patient.email);
+		$("#Tel").val(patient.tel);
+		$("#NumeroCarteVitale").val(patient.NumeroCarteVitale);
+		$("#Username").val(patient.username);
+		$("#Password").val(patient.password);
 	}
 	
 });

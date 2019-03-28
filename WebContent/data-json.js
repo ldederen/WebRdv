@@ -12,7 +12,7 @@ var patients = [ {
 		"id" : 1
 	}
 }, {
-	"id" : 1,
+	"id" : 2,
 	"civilite" : "M.",
 	"nom" : "DUBOURG",
 	"prenom" : "JASON",
@@ -25,7 +25,7 @@ var patients = [ {
 		"id" : 2
 	}
 }, {
-	"id" : 1,
+	"id" : 3,
 	"civilite" : "M.",
 	"nom" : "SARPOULET",
 	"prenom" : "Jory",
@@ -38,7 +38,7 @@ var patients = [ {
 		"id" : 1
 	}
 }, {
-	"id" : 1,
+	"id" : 4,
 	"civilite" : "M.",
 	"nom" : "DEDEREM",
 	"prenom" : "Loïc",
@@ -84,12 +84,57 @@ var praticiens = [ {
 		"prenom" : "Eric",
 		"mail":"esultan@ajc.com",
 		"tel" : "06-12-36-54-98",
-		"dureeCreneau" : 60 
+		"dureeCreneau" : 60,
+		"Utilisateur" :{
+			"id":1
+			}
 	}, {
 		"id" : 2,
 		"nom" : "ABID",
 		"prenom" : "Jordan",
 		"mail":"jabid@ajc.com",
 		"tel" : "06-12-36-87-98",
-		"dureeCreneau" : 15
+		"dureeCreneau" : 15,
+		"Utilisateur" :{
+			"id":2
+		}
 	} ];
+
+var utilisateurs =[{
+	"id":1,
+	"username":"esultan",
+	"mdp":"AJC",
+	"type":"PRATICIEN"
+},{
+	"id":2,
+	"username":"jabid",
+	"mdp":"AJC2",
+	"type":"PRATICIEN"
+}];
+
+
+var patientsRdvHistorique = [ {
+	"id" : 1,
+	"Date" : "01/04/17",
+	"lieu" : "Bordeaux",
+	"motif" : "Mega grosse gastro",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 2,
+	"Date" : "20/04/17",
+	"lieu" : "Pessac",
+	"motif" : "Maux de ventre",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 3,
+	"Date" : "11/06/17",
+	"lieu" : "Talence",
+	"motif" : "Rage de la dent gauche",
+	"nomDuPraticien" : "XXXXX",
+}, {
+	"id" : 4,
+	"Date" : "05/09/17",
+	"lieu" : "Libourne",
+	"motif" : "Massage Shiatsu du dos",
+	"nomDuPraticien" : "XXXXX",
+}];

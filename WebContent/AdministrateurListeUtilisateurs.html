@@ -10,76 +10,49 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="AdministrateurListeUtilisateurs.js"></script>
 </head>
 <body>
 	<div class="container">
 
+		<div>
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active">Mon profil</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurListeUtilisateurs.html">Liste des
+						utilisateurs</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurListeMotifsDéfaut.html">Liste des motifs
+						par défaut</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurValidationEnAttente.html">En attente
+						validation</a></li>
+				<li class="nav-item"><a class="nav-link" href="Help.html">Help</a></li>
+				<li class="nav-item"><a class="nav-link" href="LogOut.html"><i
+						class="fas fa-sign-out-alt"></i></a></li>
+			</ul>
+		</div>
 
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Utilisateur</li>
+				<li class="breadcrumb-item active" aria-current="page">Mon
+					espace administrateur</li>
+				<li class="breadcrumb-item active" aria-current="page">Liste
+					des utilisateurs</li>
 			</ol>
 		</nav>
 
 
 
-		<ul class="nav">
-			<li class="nav-item"><a class="nav-link active" href="#">Liste
-					des utilisateurs</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Liste des
-					spécialités</a></li>
-		</ul>
-
-
-		<table class="table table-striped">
+		<table id="users-tab" class="table table-striped">
 			<thead class="thead-dark">
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">Nom</th>
-					<th scope="col">Prénom</th>
-					<th scope="col">Mail</th>
-					<th scope="col">Télephone</th>
-					<th scope="col">Statut</th>
-					<th scope="col">N° sécu</th>
+					<th scope="col">Username</th>
+					<th scope="col">Type</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Chirgurgie</td>
-					<td><i class="fas fa-pen"></i></td>
-					<td><i class="fas fa-trash-alt"></i></td>
-					<td></td>
-					<td>
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button"
-								id="dropdownMenuButton" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false"><a class="dropdown-item" href="#">Patient</a></button>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a
-									class="dropdown-item" href="#">Praticien</a> <a
-									class="dropdown-item" href="#">Administrateur</a>
-							</div>
-						</div>
-					</td>
-					<td></td>
-					<td></td>
-
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Dentition</td>
-					<td><i class="fas fa-pen"></i></td>
-					<td><i class="fas fa-trash-alt"></i></td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Plastrochirurgie</td>
-					<td><i class="fas fa-pen"></i></td>
-					<td><i class="fas fa-trash-alt"></i></td>
-				</tr>
-			</tbody>
 		</table>
 
 	</div>
