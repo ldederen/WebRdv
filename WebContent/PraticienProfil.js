@@ -29,7 +29,7 @@ $(document).ready(function() {
 	
 	this.reload=function(){
 		for(let praticien of praticiens) {
-			$("#Id").append("<option value='"+praticien.id+"'>"+praticien.prenom+" "+praticien.nom+"</option>");
+			$("#Id").append("<option value='"+praticien.id+"' onclick=reload()>"+praticien.prenom+" "+praticien.nom+"</option>");
 		}
 	};
 	this.reload();
