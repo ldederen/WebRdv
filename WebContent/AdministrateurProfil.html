@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Administrateur</title>
+<link rel="stylesheet" type="text/css"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="AdministrateurProfil.js"></script>
+<script src="data-json.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br />
+		<div>
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active">Mon profil</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurListeUtilisateurs.html">Liste des
+						utilisateurs</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurListeMotifsDéfaut.html">Liste des motifs
+						par défaut</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="AdministrateurValidationEnAttente.html">En attente
+						validation</a></li>
+				<li class="nav-item"><a class="nav-link" href="Help.html">Help</a></li>
+				<li class="nav-item"><a class="nav-link" href="LogOut.html"><i
+						class="fas fa-sign-out-alt"></i></a></li>
+			</ul>
+		</div>
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Mon
+					espace administrateur</li>
+				<li class="breadcrumb-item active" aria-current="page">Mes
+					informations</li>
+			</ol>
+		</nav>
+
+		<div>
+			<form>
+				<br />
+
+				<div class="form-group">
+					<label for="Username">Identifiant</label> <input type="text"
+						class="form-control" id="Username" placeholder="Identifiant"
+						readonly>
+				</div>
+				<div class="form-group">
+					<label for="password">Mot de passe</label> <input type="password"
+						class="form-control" id="Password" placeholder="Mot de passe"
+						readonly>
+				</div>
+				<div class="form-group">
+					<label for="password-confirmation">Confirmation du mot de passe</label> <input type="password"
+						class="form-control" id="Password-confirmation" placeholder="Confirmation du mot de passe"
+						readonly>
+				</div>
+				<button id="MAJ" type="button" class="btn btn-primary"
+					onclick="maj();">Mettre à jour</button>
+				<button id="Valid" type="button" class="btn btn-success"
+					onclick="valider();" style="display: none">Valider</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
